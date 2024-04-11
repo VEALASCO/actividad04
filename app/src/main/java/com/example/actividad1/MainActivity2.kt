@@ -18,6 +18,7 @@ class MainActivity2 : AppCompatActivity() {
             insets
         }
 
+
         val bienvenida = findViewById<TextView>(R.id.tv_bienvenida)
         val nombreUsuario = intent.getStringExtra("usuario")
         val sharedpref = this.getSharedPreferences("MiSharedPreferent ", MODE_PRIVATE)
