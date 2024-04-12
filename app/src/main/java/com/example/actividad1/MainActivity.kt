@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         val btn_Siguiente = findViewById<Button>(R.id.btn_siguiente)
         val ptUsuario = findViewById<EditText>(R.id.pt_Usuario)
         val ptContraseña = findViewById<EditText>(R.id.pt_Contraseña)
-        val ptApodo = findViewById<EditText>(R.id.apodo)
+        val ptApodo = findViewById<EditText>(R.id.ptApodo)
 
 
 
@@ -40,10 +40,8 @@ class MainActivity : AppCompatActivity() {
                     intent.putExtra("usuario", usuario)
 
                     //Guardamos un archivo con ayuda de la clase sharedPreferences, el cual nos va a pedir el nombre
-                    val sharedPref = this.getSharedPreferences(
-                        "MiSharedPreferent",
-                        MODE_PRIVATE
-                    )//El "MODE_PRIVATE" hace que solo lo puedas ver desde esta aplicación
+                    val sharedPref = this.getSharedPreferences("MiSharedPreferences", MODE_PRIVATE)
+                    //El "MODE_PRIVATE" hace que solo lo puedas ver desde esta aplicación
                     with(sharedPref.edit()) {
                         //Creamos una cadena y le vamos a agregar un valor llamado "apodo" y a este le agregaremos el valor que ingreso el usuario, en este caso es privado
                         putString("apodo", apodo)

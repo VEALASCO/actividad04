@@ -76,7 +76,7 @@
         app:layout_constraintVertical_bias="0.537" />
 
     <EditText
-        android:id="@+id/apodo"
+        android:id="@+id/ptApodo"
         android:layout_width="320dp"
         android:layout_height="63dp"
         android:ems="10"
