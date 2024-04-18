@@ -62,5 +62,11 @@ class MainActivity : AppCompatActivity() {
             }
 
         }
+
+        val canciones = findViewById<Button>(R.id.btnCanciones)
+        canciones.setOnClickListener {
+            val intent = Intent(this, Activiti_Canciones::class.java)
+            startActivity(intent)
+        }
     }
 }
